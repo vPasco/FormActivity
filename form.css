@@ -1,93 +1,60 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Form Activity</title>
-        <link rel="stylesheet" href="form.css">
-    </head>
-   
-<script language="Javascript" type="text/javascript">
+h1{
+    font-family: 'Oswald Regular';
+    font-weight: bolder;
+}
+form{
+    font-family: 'Oswald Regular';
+    font-weight: 400;
+}
+body{
+    background-color: lightslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        function check() {
-            const password = document.getElementById("password").value;
-            const year = Number(document.getElementById("age").value.substring(0, 4));
-            const age = new Date().getFullYear() - year;
 
-            let flag = true;
+div{
+    background-color: white;
+    box-sizing: content-box;
+    width: max-content;
+    padding: 40px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.box{
+    width: 100%;
+    
+}
+.GreenButton{
+    width: 100px;
+    height: 25px;
+    background-color: green;
+    color: white;
+    border: 0;
+}
+.RedButton{
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border: 0;
+}
+.dot{
+    margin: 10px 10px 10px 10px;
+}
 
-            console.log(password);
-            console.log(year);
-            console.log(age);
+.span-text{
+    color:red;
+}
 
-            if (password.length < 8) {
-            document.getElementById("message1").textContent =
-                "Password length must be at least 8 characters.";
-            flag = false;
-            } else {
-            document.getElementById("message1").textContent = "";
-            }
-
-            if (age <= 21) {
-            document.getElementById("message2").textContent = "Minors are not allowed!";
-            flag = false;
-            } else {
-            document.getElementById("message2").textContent = "";
-            }
-
-            if (flag) {
-            document.getElementById("message3").textContent =
-                "Hooray! Your account has been successfully created.";
-            }
-        }
-</script>
-    <body>
-        <div>
-            <h1>Registration Form</h1>
-            <p id="message3" ></p>
-            <form>
-                First Name:   
-                    <br>
-                    <input type="text" class="box" name="firstname"/>
-                    <br>
-                Last Name: 
-                    <br>    
-                    <input type="text" class="box" name="lastname"/>
-                    <br>
-                Nick Name:     
-                    <br>
-                    <input type="text" class="box" name="nickname"/>
-                    <br>
-                Email:         
-                    <br>
-                    <input type="email" class="box" name="email"/>
-                    <br>
-                Password:      
-                    <br>
-                    <input type="password" id="password" class="box" name="password"/>
-                    <br>
-                    <span id = "message1" style="color:red"></span><br>
-                Date of Birth: 
-                    <br>
-                    <input type="date" id="age" class="box" name="bday" value=""/>
-                    <br>
-                    <span id = "message2" style="color:red"></span><br>
-                Gender:        
-                    <br>
-                    <input type="radio" class="dot" name="male" value="male"/> Male
-                    <input type="radio" class="dot" name="female" value="female"/> Female
-                    <input type="radio" class="dot" name="other" value="other"/> Other 
-                    <br>
-                Mobile:        
-                    <br>
-                    <input type="number" class="box" name="mobile"/>
-                    <br>
-                Address:       
-                    <br>
-                    <textarea type="address" class="box" value="address" cols="30" rows="10"></textarea>
-                    <br>
-                
-                <button type="button" class="GreenButton" name="submit" value="Submit" onclick="check()">Submit</button>
-                <button type="button" class="RedButton" name="reset" value="Reset">Reset</button>
-            </form>
-        </div>
-    </body>
-</html>
+p{
+    color:green;
+}
