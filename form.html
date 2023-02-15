@@ -15,26 +15,27 @@
             let flag = true;
 
             console.log(password);
-            console.log(year);
-            console.log(age);
-
+           
             if (password.length < 8) {
-            document.getElementById("message1").textContent =
+            document.getElementById("password_check").textContent =
                 "Password must be at least 8 characters.";
             flag = false;
             } else {
-            document.getElementById("message1").textContent = "";
+            document.getElementById("password_check").textContent = "";
             }
-
+            
+            console.log(year);
+            console.log(age);
+            
             if (age <= 21) {
-            document.getElementById("message2").textContent = "Minors are not allowed!";
+            document.getElementById("age_check").textContent = "Minors are not allowed!";
             flag = false;
             } else {
-            document.getElementById("message2").textContent = "";
+            document.getElementById("age_check").textContent = "";
             }
 
             if (flag) {
-            document.getElementById("message3").textContent =
+            document.getElementById("success").textContent =
                 "Hooray! Your account has been successfully created.";
             }
         }
@@ -42,7 +43,7 @@
     <body>
         <div>
             <h1>Registration Form</h1>
-            <p id="message3" ></p>
+            <p id="success" ></p>
             <form>
                 First Name:   
                     <br>
@@ -64,12 +65,12 @@
                     <br>
                     <input type="password" id="password" class="box" name="password"/>
                     <br>
-                    <span id = "message1" style="color:red"></span><br>
+                    <span id = "password_check" style="color:red"></span><br>
                 Date of Birth: 
                     <br>
                     <input type="date" id="age" class="box" name="bday" value=""/>
                     <br>
-                    <span id = "message2" style="color:red"></span><br>
+                    <span id = "age_check" style="color:red"></span><br>
                 Gender:        
                     <br>
                     <input type="radio" class="dot" name="male" value="male"/> Male
@@ -85,8 +86,8 @@
                     <textarea type="address" class="box" value="address" cols="30" rows="10"></textarea>
                     <br>
                 
-                <button type="button" class="GreenButton" name="submit" value="Submit" onclick="check()">Submit</button>
-                <button type="reset" class="RedButton" name="reset" value="Reset">Reset</button>
+                <button type="button" class="Green_Button" name="submit" value="Submit" onclick="check()">Submit</button>
+                <button type="reset" class="Red_Button" name="reset" value="Reset">Reset</button>
             </form>
         </div>
     </body>
