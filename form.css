@@ -33,14 +33,14 @@ div{
     width: 100%;
     
 }
-.GreenButton{
+.Green_Button{
     width: 100px;
     height: 25px;
     background-color: green;
     color: white;
     border: 0;
 }
-.RedButton{
+.Red_Button{
     width: 100px;
     height: 25px;
     background-color: red;
